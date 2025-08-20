@@ -12,7 +12,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -29,22 +29,18 @@
       ],
       "@/components/*": [
         "app/components/*"
-      ]
+      ],
+      "@auth/*": ["app/api/auth/*"]
     }
   },
-  // "include": [
-  //   "**/*.ts",
-  //   "**/*.tsx",
-  //   ".next/types/**/*.ts",
-  //   "next-env.d.ts"
-  // ],
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "next-env.d.ts",
-    "types",
-    ".next/types/**/*.ts"
-  ],
+  "**/*.ts",
+  "**/*.tsx",
+  "next-env.d.ts",
+  "types",
+  ".next/types/**/*.ts",
+  "mongodb.d.ts"
+, ".next/types/app/api/auth/[...nextauth]/route.ts"],
   "exclude": [
     "node_modules"
   ]

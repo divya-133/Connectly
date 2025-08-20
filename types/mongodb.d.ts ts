@@ -1,0 +1,11 @@
+import { MongoClient } from "mongodb";
+
+declare global {
+  // Declare the shared MongoClient promise on the globalThis object
+  // This prevents multiple connections during hot reloads in development
+  // eslint-disable-next-line no-var
+  var _mongoClientPromise: Promise<MongoClient> | undefined;
+}
+
+// This file must be treated as a module to avoid errors
+export {};
